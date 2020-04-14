@@ -8,6 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
+            "runtimeExecutable": "/Users/johnzhu/.nvm/versions/node/v13.2.0/bin/node",
             "program": "${file}"
         }
     ]
