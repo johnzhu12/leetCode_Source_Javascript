@@ -1,0 +1,1 @@
+# [FizzBuzz](https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/25/math/60/)
