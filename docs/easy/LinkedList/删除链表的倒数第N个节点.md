@@ -2,6 +2,10 @@
 
 ![removeNthFromEnd](./imgs/removeNthFromEnd.png)
 
+## 思路
+
+两个游标，往后
+
 ```js
 /**
  * Definition for singly-linked list.

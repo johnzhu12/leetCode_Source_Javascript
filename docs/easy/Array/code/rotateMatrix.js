@@ -9,9 +9,9 @@ var rotate = function (matrix) {
         }
     }
 
-    for (var i = 0; i < matrix.length; i++) {
-        matrix[i].reverse()
-    }
+    // for (var i = 0; i < matrix.length; i++) {
+    //     matrix[i].reverse()
+    // }
 };
 
 var srcMatrix =

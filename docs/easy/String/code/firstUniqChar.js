@@ -1,5 +1,5 @@
 var firstUniqChar = function (s) {
-    if (s.length <= 0) return -1
+    if (s.length == 0) return -1
     if (s.length == 1) return 0
     s = s.split("") //转成数组
     var temp = [], index = 0;
@@ -17,6 +17,6 @@ var firstUniqChar = function (s) {
     return -1;
 };
 
-var s = "dddccdbba"
+var s = ""
 var res = firstUniqChar(s)
 console.log(res)

@@ -1,28 +1,21 @@
-//递归，知道n-1行的，就知道n行的
-
-var countAndSay = function (n) {
-    //第一行就直接输出
-    if (n == 1) {
-        return "1";
+function countAndSay(n) {
+    var res = "1";
+    //从第一行开始，一行一行产生
+    while (n > 1) {
+        var temp = "";
+        for (var i = 0; i < res.length; i++) {
+            var num = getRepeatNum(res.substring(i));
+            temp = temp + num + "" + res.charAt(i);
+            //跳过重复的字符
+            i = i + num - 1;
+        }
+        n--;
+        //更新
+        res = temp;
     }
-    //得到上一行的字符串
-    var last = countAndSay(n - 1);
-    //输出当前行的字符串
-    return getNextString(last);
+    return res;
 
 }
-
-function getNextString(last) {
-    //长度为 0 就返回空字符串
-    if (last.length == 0) {
-        return "";
-    }
-    //得到第 1 个字符重复的次数
-    var num = getRepeatNum(last);
-    // 次数 + 当前字符 + 其余的字符串的情况
-    return num + "" + last.charAt(0) + getNextString(last.substring(num));
-}
-
 //得到字符 string[0] 的重复个数，例如 "111221" 返回 3
 function getRepeatNum(string) {
     var count = 1;
@@ -36,7 +29,6 @@ function getRepeatNum(string) {
     }
     return count;
 }
-
 var res = countAndSay(10)
 
 console.log('结果:', res)
