@@ -4,6 +4,20 @@
 
 自己的刷题记录，理一下思路。语言是js
 
+可以clone代码
+
+```shell
+git clone https://github.com/johnzhu12/leetCode_Source.git
+
+cd leetCode_Source
+
+npm install -g docsify
+
+docsify serve docs
+```
+
+在线地址：https://johnzhu12.github.io/docs/#/
+
 ## 初级算法
 
 ### 数组
