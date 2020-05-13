@@ -1,10 +1,8 @@
-# leetcode刷题
+# leetcode刷题js版
 
 ## 介绍
 
-自己的刷题记录，理一下思路。语言是js
-
-可以clone代码
+自己的刷题记录，理一下思路。语言是js。源码在每个对应目录的code文件夹下
 
 ```shell
 git clone https://github.com/johnzhu12/leetCode_Source.git
