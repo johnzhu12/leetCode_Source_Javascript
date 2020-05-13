@@ -4,7 +4,17 @@
 
 ## 思路
 
-两个游标，往后
+两个游标，一个first,一个second。都指向头结点
+
+先把first往后移动N个节点。
+
+如果first为null,就是到尾部了，所以删除的是头结点。(题目里保证n是有效的，也就是说不会超过链表长度)
+
+first还有后续节点，就让second和first一起往后移动，直到first到链表末尾。这是second.next就是要删除的倒数第N个节点了
+
+ second.next = second.next.next删除掉，返回头节点
+
+ ![removeNthFromEndDemo](./imgs/demos/removeNthFromEndDemo.jpg)
 
 ```js
 /**
