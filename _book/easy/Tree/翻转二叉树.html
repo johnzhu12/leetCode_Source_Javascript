@@ -1,0 +1,1114 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>翻转二叉树 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="将有序数组转换为二叉搜索树.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">初级算法</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    数组
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Array/存在重复.html">
+            
+                <a href="../Array/存在重复.html">
+            
+                    
+                    存在重复
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Array/加一.html">
+            
+                <a href="../Array/加一.html">
+            
+                    
+                    加一
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../Array/两个数组的交集.html">
+            
+                <a href="../Array/两个数组的交集.html">
+            
+                    
+                    两个数组的交集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../Array/两数之和.html">
+            
+                <a href="../Array/两数之和.html">
+            
+                    
+                    两数之和
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../Array/买股票最佳时机.html">
+            
+                <a href="../Array/买股票最佳时机.html">
+            
+                    
+                    买股票最佳时机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../Array/旋转数组.html">
+            
+                <a href="../Array/旋转数组.html">
+            
+                    
+                    旋转数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../Array/旋转图像.html">
+            
+                <a href="../Array/旋转图像.html">
+            
+                    
+                    旋转图像
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../Array/移动零.html">
+            
+                <a href="../Array/移动零.html">
+            
+                    
+                    移动零
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../Array/有效的数独.html">
+            
+                <a href="../Array/有效的数独.html">
+            
+                    
+                    有效的数独
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../Array/只出现一次的数字.html">
+            
+                <a href="../Array/只出现一次的数字.html">
+            
+                    
+                    只出现一次的数字
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../Array/删除排序数组中的重复项.html">
+            
+                <a href="../Array/删除排序数组中的重复项.html">
+            
+                    
+                    删除排序数组中的重复项
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    字符串
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../String/反转字符串.html">
+            
+                <a href="../String/反转字符串.html">
+            
+                    
+                    反转字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../String/整数反转.html">
+            
+                <a href="../String/整数反转.html">
+            
+                    
+                    整数反转
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../String/字符串中的第一个唯一字符.html">
+            
+                <a href="../String/字符串中的第一个唯一字符.html">
+            
+                    
+                    字符串中的第一个唯一字符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../String/有效的字母异位词.html">
+            
+                <a href="../String/有效的字母异位词.html">
+            
+                    
+                    有效的字母异位词
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../String/验证回文字符串.html">
+            
+                <a href="../String/验证回文字符串.html">
+            
+                    
+                    验证回文字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../String/字符串转换整数.html">
+            
+                <a href="../String/字符串转换整数.html">
+            
+                    
+                    字符串转换整数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../String/实现strStr.html">
+            
+                <a href="../String/实现strStr.html">
+            
+                    
+                    实现strStr
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../String/外观数列.html">
+            
+                <a href="../String/外观数列.html">
+            
+                    
+                    外观数列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../String/最长公共前缀.html">
+            
+                <a href="../String/最长公共前缀.html">
+            
+                    
+                    最长公共前缀
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    链表
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../LinkedList/删除链表中的节点.html">
+            
+                <a href="../LinkedList/删除链表中的节点.html">
+            
+                    
+                    删除链表中的节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../LinkedList/删除链表的倒数第N个节点.html">
+            
+                <a href="../LinkedList/删除链表的倒数第N个节点.html">
+            
+                    
+                    删除链表的倒数第N个节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../LinkedList/反转链表.html">
+            
+                <a href="../LinkedList/反转链表.html">
+            
+                    
+                    反转链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../LinkedList/合并两个有序链表.html">
+            
+                <a href="../LinkedList/合并两个有序链表.html">
+            
+                    
+                    合并两个有序链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../LinkedList/回文链表.html">
+            
+                <a href="../LinkedList/回文链表.html">
+            
+                    
+                    回文链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../LinkedList/环形链表.html">
+            
+                <a href="../LinkedList/环形链表.html">
+            
+                    
+                    环形链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    树
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="二叉树的最大深度.html">
+            
+                <a href="二叉树的最大深度.html">
+            
+                    
+                    二叉树的最大深度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="验证二叉搜索树.html">
+            
+                <a href="验证二叉搜索树.html">
+            
+                    
+                    验证二叉搜索树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="对称二叉树.html">
+            
+                <a href="对称二叉树.html">
+            
+                    
+                    对称二叉树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="二叉树的层序遍历.html">
+            
+                <a href="二叉树的层序遍历.html">
+            
+                    
+                    二叉树的层序遍历
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="将有序数组转换为二叉搜索树.html">
+            
+                <a href="将有序数组转换为二叉搜索树.html">
+            
+                    
+                    将有序数组转换为二叉搜索树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.6" data-path="翻转二叉树.html">
+            
+                <a href="翻转二叉树.html">
+            
+                    
+                    翻转二叉树
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    排序和搜索
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../SortSearch/合并两个有序数组.html">
+            
+                <a href="../SortSearch/合并两个有序数组.html">
+            
+                    
+                    合并两个有序数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../SortSearch/第一个错误的版本.html">
+            
+                <a href="../SortSearch/第一个错误的版本.html">
+            
+                    
+                    第一个错误的版本
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    动态规划
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../DP/爬楼梯.html">
+            
+                <a href="../DP/爬楼梯.html">
+            
+                    
+                    爬楼梯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../DP/买卖股票的最佳时机.html">
+            
+                <a href="../DP/买卖股票的最佳时机.html">
+            
+                    
+                    买卖股票的最佳时机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../DP/最大子序和.html">
+            
+                <a href="../DP/最大子序和.html">
+            
+                    
+                    最大子序和
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../DP/打家劫舍.html">
+            
+                <a href="../DP/打家劫舍.html">
+            
+                    
+                    打家劫舍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    设计问题
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../Design/打乱数组.html">
+            
+                <a href="../Design/打乱数组.html">
+            
+                    
+                    打乱数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../Design/最小栈.html">
+            
+                <a href="../Design/最小栈.html">
+            
+                    
+                    最小栈
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    数学
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../Math/FizzBuzz.html">
+            
+                <a href="../Math/FizzBuzz.html">
+            
+                    
+                    FizzBuzz
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../Math/计数质数.html">
+            
+                <a href="../Math/计数质数.html">
+            
+                    
+                    计数质数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../Math/3的幂.html">
+            
+                <a href="../Math/3的幂.html">
+            
+                    
+                    3的幂
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../Math/罗马数字转整数.html">
+            
+                <a href="../Math/罗马数字转整数.html">
+            
+                    
+                    罗马数字转整数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    其他
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../Other/位1的个数.html">
+            
+                <a href="../Other/位1的个数.html">
+            
+                    
+                    位1的个数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../Other/汉明距离.html">
+            
+                <a href="../Other/汉明距离.html">
+            
+                    
+                    汉明距离
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../Other/颠倒二进制位.html">
+            
+                <a href="../Other/颠倒二进制位.html">
+            
+                    
+                    颠倒二进制位
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../Other/帕斯卡三角形.html">
+            
+                <a href="../Other/帕斯卡三角形.html">
+            
+                    
+                    帕斯卡三角形
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../Other/有效的括号.html">
+            
+                <a href="../Other/有效的括号.html">
+            
+                    
+                    有效的括号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../Other/缺失数字.html">
+            
+                <a href="../Other/缺失数字.html">
+            
+                    
+                    缺失数字
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">中级算法</li>
+        
+        
+    
+
+    
+        
+        <li class="header">数组和字符串</li>
+        
+        
+    
+
+    
+        
+        <li class="header">其他算法</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../basicalgo/sort/sort.html">
+            
+                <a href="../../basicalgo/sort/sort.html">
+            
+                    
+                    十大排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >翻转二叉树</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7FFB;&#x8F6C;&#x4E8C;&#x53C9;&#x6811;"><a href="">&#x7FFB;&#x8F6C;&#x4E8C;&#x53C9;&#x6811;</a></h1>
+<pre><code class="lang-js"><span class="hljs-comment">/* function TreeNode(x) {
+    this.val = x;
+    this.left = null;
+    this.right = null;
+} */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Mirror</span>(<span class="hljs-params">root</span>) </span>{
+    reverseTree(root);
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">reverseTree</span>(<span class="hljs-params">root</span>) </span>{
+    <span class="hljs-comment">//&#x4E3A;&#x7A7A;&#x5219;&#x7ED3;&#x675F;</span>
+    <span class="hljs-keyword">if</span> (root == <span class="hljs-literal">null</span>) {
+        <span class="hljs-keyword">return</span>;
+    }
+    <span class="hljs-comment">//&#x5047;&#x8BBE;root&#x4E24;&#x8FB9;&#x7684;&#x5B50;&#x6811;&#x81EA;&#x5DF1;&#x90FD;&#x5DF2;&#x7ECF;&#x7FFB;&#x8F6C;&#x6210;&#x529F;&#x4E86;&#xFF0C;&#x90A3;&#x4E48;&#x53EA;&#x9700;&#x8981;&#x518D;&#x5C06;&#x5DE6;&#x53F3;&#x5B50;&#x6811;&#x4E92;&#x6362;&#x4E00;&#x4E0B;&#x5C31;&#x6210;&#x529F;&#x4E86;</span>
+    <span class="hljs-comment">//&#x4EA4;&#x6362;root&#x7684;&#x5DE6;&#x53F3;&#x5B50;&#x6811;</span>
+    swap(root);
+
+    <span class="hljs-comment">//&#x5DE6;&#x53F3;&#x5B50;&#x6811;&#x7FFB;&#x8F6C;&#x81EA;&#x5DF1;&#x53BB;&#x5904;&#x7406;&#x5C31;&#x884C;&#x4E86;&#xFF0C;&#x6211;&#x4EEC;&#x89C4;&#x5B9A;&#x6BCF;&#x4E2A;&#x5B50;&#x6811;&#x7684;root&#x90FD;&#x8DDF;&#x6700;&#x7EC8;&#x7684;root&#x5904;&#x7406;&#x65B9;&#x5F0F;&#x4E00;&#x6837;&#x5373;&#x53EF;</span>
+    reverseTree(root.left);
+    reverseTree(root.right);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">swap</span>(<span class="hljs-params">root</span>) </span>{
+    <span class="hljs-keyword">var</span> node = <span class="hljs-literal">null</span>;
+    node = root.left;
+    root.left = root.right;
+    root.right = node;
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="将有序数组转换为二叉搜索树.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 将有序数组转换为二叉搜索树">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"翻转二叉树","level":"1.5.6","depth":2,"next":{"title":"排序和搜索","level":"1.6","depth":1,"ref":"","articles":[{"title":"合并两个有序数组","level":"1.6.1","depth":2,"path":"easy/SortSearch/合并两个有序数组.md","ref":"./easy/SortSearch/合并两个有序数组.md","articles":[]},{"title":"第一个错误的版本","level":"1.6.2","depth":2,"path":"easy/SortSearch/第一个错误的版本.md","ref":"./easy/SortSearch/第一个错误的版本.md","articles":[]}]},"previous":{"title":"将有序数组转换为二叉搜索树","level":"1.5.5","depth":2,"path":"easy/Tree/将有序数组转换为二叉搜索树.md","ref":"./easy/Tree/将有序数组转换为二叉搜索树.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"easy/Tree/翻转二叉树.md","mtime":"2020-05-11T06:19:46.432Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-14T10:35:38.026Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
