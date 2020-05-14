@@ -1,6 +1,6 @@
-# leetcode刷题js版
 
-## 初级算法
+
++ 初级算法
 
 * 数组
     * [存在重复](./easy/Array/存在重复.md)
@@ -75,13 +75,15 @@
     * [有效的括号](./easy/Other/有效的括号.md)
     * [缺失数字](./easy/Other/缺失数字.md)
 
-## 中级算法
 
-### 数组和字符串
 
-## 其他算法
++ 中级算法
 
-* [十大排序](./basicalgo/sort/sort.md)
+ * 数组和字符串
+
++ 其他算法
+
+ * [十大排序](./basicalgo/sort/sort.md)
 
 
 
