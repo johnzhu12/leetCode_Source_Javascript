@@ -1,5 +1,12 @@
 {
     "plugins": [
-        "expandable-chapters"
-    ]
+        "expandable-chapters",
+        "disqus",
+        "multipart"
+    ],
+    "pluginsConfig": {
+        "disqus": {
+            "shortName": "leetcodesourcejs"
+        }
+    }
 }

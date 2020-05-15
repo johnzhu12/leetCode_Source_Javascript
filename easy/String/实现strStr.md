@@ -5,7 +5,6 @@
 ## 思路
 
 1. 用API直接可以
-2. 用substr
 
 ```js
 var strStr = function (haystack, needle) {
@@ -13,6 +12,7 @@ var strStr = function (haystack, needle) {
     return haystack.indexOf(needle)
 };
 ```
+2. 用substr
 
 ```js
 var strStr = function(haystack, needle) {

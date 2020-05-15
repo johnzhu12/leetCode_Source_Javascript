@@ -1,3 +1,0 @@
-这里是从常用数据结构
-用来调试的
-直接从javascript-algorithms拷贝过来
