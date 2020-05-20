@@ -95,6 +95,7 @@ gitbook serve
 
 + 中级算法
     * 数组和字符串
+        * [最长回文子串](./normal/Array&String/最长回文子串.md)
 
 + 其他算法
 
