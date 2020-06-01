@@ -78,6 +78,7 @@
 
 + 中级算法
     * 数组和字符串
+        * [三数之和](./normal/Array&String/三数之和.md)
         * [最长回文子串](./normal/Array&String/最长回文子串.md)
 
 + 其他算法
