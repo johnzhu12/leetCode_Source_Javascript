@@ -1,13 +1,3 @@
-# [最小栈](https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/24/design/59/)
-
-![minStack](./imgs/minStack.png)
-
-
-## 思路
-
-比较简单，直接上代码
-
-```js
 /**
  * initialize your data structure here.
  */
@@ -54,4 +44,20 @@ MinStack.prototype.getMin = function () {
     return min;
 
 };
-```
+
+/**
+ * Your MinStack object will be instantiated and called as such:
+ * var obj = new MinStack()
+ * obj.push(x)
+ * obj.pop()
+ * var param_3 = obj.top()
+ * var param_4 = obj.getMin()
+ */
+
+var obj = new MinStack()
+obj.push(-1)
+
+var param_3 = obj.top()
+console.log(param_3)
+var param_4 = obj.getMin()
+console.log(param_4)

@@ -1,12 +1,7 @@
-# [罗马数字转整数](https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/25/math/63/)
-
-![romanToInt](./imgs/romanToInt.png)
-
-### 思路
-
-我想起了在angularjs的parser源码里有个peek方法,就是多看下下一个元素合起来是不是特殊的就可以了。
-
-```js
+/**
+ * @param {string} s
+ * @return {number}
+ */
 var romanToInt = function (s) {
     var code = { "I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000, "IV": 4, "IX": 9, "XL": 40, "XC": 90, "CD": 400, "CM": 900 }
     var sum = 0;
@@ -32,5 +27,10 @@ var peekSpecial = function (peekchar) {
     }
     return false;
 }
-```
 
+
+var src = 'IM'
+
+var res = romanToInt(src)
+
+console.log(res)

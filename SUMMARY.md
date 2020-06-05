@@ -1,6 +1,5 @@
-
-
 + 初级算法
+
     * 数组
         * [存在重复](./easy/Array/存在重复.md)
         * [加一](./easy/Array/加一.md)
@@ -77,9 +76,71 @@
 
 
 + 中级算法
+
     * 数组和字符串
         * [三数之和](./normal/Array&String/三数之和.md)
+        * [矩阵置零](./normal/Array&String/矩阵置零.md)
+        * [字母异位词分组](./normal/Array&String/字母异位词分组.md)
+        * [无重复字符的最长子串](./normal/Array&String/无重复字符的最长子串.md)
         * [最长回文子串](./normal/Array&String/最长回文子串.md)
+        * [递增的三元子序列](./normal/Array&String/递增的三元子序列.md)
+
+    * 链表
+        * [两数相加](./normal/LinkedList/两数相加.md)
+        * [奇偶链表](./normal/LinkedList/奇偶链表.md)
+        * [相交链表](./normal/LinkedList/相交链表.md)
+
+    * 树和图
+        * [中序遍历二叉树](./normal/Tree&Graph/中序遍历二叉树.md)
+        * [二叉树的锯齿形层次遍历](./normal/Tree&Graph/二叉树的锯齿形层次遍历.md)
+        * [从前序与中序遍历序列构造二叉树](./normal/Tree&Graph/从前序与中序遍历序列构造二叉树.md)
+        * [填充每个节点的下一个右侧节点指针](./normal/Tree&Graph/填充每个节点的下一个右侧节点指针.md)
+        * [二叉搜索树中第K小的元素](./normal/Tree&Graph/二叉搜索树中第K小的元素.md)
+        * [岛屿数量](./normal/Tree&Graph/岛屿数量.md)
+
+    * 回溯算法
+        * [电话号码的字母组合](./normal/backTracking/电话号码的字母组合.md)
+        * [括号生成](./normal/backTracking/括号生成.md)
+        * [全排列](./normal/backTracking/全排列.md)
+        * [子集](./normal/backTracking/子集.md)
+        * [单词搜索](./normal/backTracking/单词搜索.md)
+
+    * 排序和搜索
+        * [颜色分类](./normal/sort&search/颜色分类.md)
+        * [前K个高频元素](./normal/sort&search/前K个高频元素.md)
+        * [数组中的第K个最大元素](./normal/sort&search/数组中的第K个最大元素.md)
+        * [寻找峰值](./normal/sort&search/寻找峰值.md)
+        * [在排序数组中查找元素的第一个和最后一个位置](./normal/sort&search/在排序数组中查找元素的第一个和最后一个位置.md)
+        * [合并区间](./normal/sort&search/合并区间.md)
+        * [搜索旋转排序数组](./normal/sort&search/搜索旋转排序数组.md)
+        * [搜索二维矩阵II](./normal/sort&search/搜索二维矩阵II.md)
+
+    * 动态规划
+        * [跳跃游戏](./normal/DP/跳跃游戏.md)
+        * [不同路径](./normal/DP/不同路径.md)
+        * [零钱兑换](./normal/DP/零钱兑换.md)
+        * [LIS](./normal/DP/LIS.md)
+
+    * 设计问题
+        * [二叉树的序列化与反序列化](./normal/design/二叉树的序列化与反序列化.md)
+        * [Insert Delete GetRandom O(1)](./normal/design/InsertDeleteGetRandom.md)
+
+    * 数学
+        * [快乐数](./normal/math/快乐数.md)
+        * [阶乘后的零](./normal/math/阶乘后的零.md)
+        * [Excel表列序号](./normal/math/Excel表列序号.md)
+        * [Pow(x,n)](./normal/math/Pow(x,n).md)
+        * [x的平方根](./normal/math/x的平方根.md)
+        * [两数相除](./normal/math/两数相除.md)
+        * [分数到小数](./normal/math/分数到小数.md)
+
+    * 其他
+        * [两整数之和](./normal/other/两整数之和.md)
+        * [逆波兰表达式求值](./normal/other/逆波兰表达式求值.md)
+        * [多数元素](./normal/other/多数元素.md)
+        * [任务调度器](./normal/other/任务调度器.md)
+       
+        
 
 + 其他算法
 
