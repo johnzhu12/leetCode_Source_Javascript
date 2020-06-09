@@ -158,9 +158,13 @@ gitbook serve
        
         
 
-+ 其他算法
++ 其他相关算法和数据结构
 
-    * [十大排序](./basicalgo/sort/sort.md)
+    * 算法
+        * [十大排序](./basicalgo/sort/sort.md)
+
+    * 数据结构
+        * [ES6Map数据结构底层原理模拟](./basicalgo/datastruct/map.md)
 
 
 
