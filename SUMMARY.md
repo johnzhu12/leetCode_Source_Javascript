@@ -96,7 +96,7 @@
         * [从前序与中序遍历序列构造二叉树](./normal/Tree&Graph/从前序与中序遍历序列构造二叉树.md)
         * [填充每个节点的下一个右侧节点指针](./normal/Tree&Graph/填充每个节点的下一个右侧节点指针.md)
         * [二叉搜索树中第K小的元素](./normal/Tree&Graph/二叉搜索树中第K小的元素.md)
-        * [岛屿数量](./normal/Tree&Graph/岛屿数量.md)
+        * [岛屿数量](./normal/Tree&Graph/numIslands.md)
 
     * 回溯算法
         * [电话号码的字母组合](./normal/backTracking/电话号码的字母组合.md)
