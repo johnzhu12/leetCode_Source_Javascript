@@ -1,10 +1,3 @@
-# [二叉树的锯齿形层次遍历](https://leetcode-cn.com/explore/interview/card/top-interview-questions-medium/32/trees-and-graphs/86/)
-
-![zigzagLevelOrder](./imgs/zigzagLevelOrder.png)
-
-## 思路
-
-```js
 var zigzagLevelOrder = function (root) {
     let res = [];
     helper(root, res, 0);
@@ -18,4 +11,3 @@ var helper = function (root, res, level) {
     helper(root.left, res, level + 1);
     helper(root.right, res, level + 1);
 }
-```
