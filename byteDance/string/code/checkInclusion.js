@@ -5,17 +5,27 @@
  */
 var checkInclusion = function (s1, s2) {
     if (s1 == '' || s2 == '') return false
-    if (s1.length < s2.length) return false
-    // if () {
-    //     return true
-    // }
+    let len1 = s1.length, len2 = s2.length;
+    if (len1 > len2) return false
+    for (let i = 0; i <= len2 - len1; i++) {
+        let subStr2 = s2.substr(i, len1)
+        if (checkStr(s1, subStr2)) {
+            return true;
+        }
+    }
     return false
 };
 function checkStr(s1, s2) {
-    s1.split('').sort().join("")
-    s2.split('').sort().join("")
-    if (s1 == s2) {
+    let tems1 = s1.split('').sort().join("")
+    let tems2 = s2.split('').sort().join("")
+    if (tems1 == tems2) {
         return true;
     }
     return false
 }
+
+let s1 = "ab", s2 = "eidbaooo"
+
+let res = checkInclusion(s1, s2)
+
+console.log('res:', res)
