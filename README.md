@@ -171,8 +171,16 @@ gitbook serve
 - 字节跳动
 
   - 字符串
-
     - [字符串的排列](./byteDance/string/字符串的排列.md)
+    - [最长公共前缀](./easy/String/最长公共前缀.md)
+    - [无重复字符的最长子串](./normal/Array&String/无重复字符的最长子串.md)
+    - [字符串相乘](./normal/Array&String/字符串相乘.md)
+    - [翻转字符串里的单词](./normal/Array&String/翻转字符串里的单词.md)
+    - [简化路径](./normal/Array&String/简化路径.md)
+    - [复原 IP 地址](./normal/Array&String/复原IP地址.md)
+  - 数组和排序
+    - [三数之和](./normal/Array&String/三数之和.md)
+    - [岛屿的最大面积](./normal/Array&String/岛屿的最大面积.md)
 
 - 腾讯
 
