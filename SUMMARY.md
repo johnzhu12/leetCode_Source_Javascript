@@ -110,6 +110,7 @@
     - [全排列](./normal/backTracking/全排列.md)
     - [子集](./normal/backTracking/子集.md)
     - [单词搜索](./normal/backTracking/单词搜索.md)
+    - [矩阵中的路径](./normal/backTracking/矩阵中的路径.md)
 
   - 排序和搜索
 

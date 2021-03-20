@@ -4,7 +4,7 @@
 
 https://leetcode-cn.com/problems/restore-ip-addresses/solution/fu-yuan-ipdi-zhi-by-leetcode-solution/
 
-回溯算法
+回溯算法,看的题解
 
 ```js
 var restoreIpAddresses = function (s) {
