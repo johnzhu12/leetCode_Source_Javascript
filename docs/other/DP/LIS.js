@@ -19,5 +19,6 @@ function lengthOfLIS(nums) {
     return max;
 }
 var src = [10, 9, 2, 5, 3, 7, 101, 18];
+// var src = [1, 3, 5, 4, 7]
 var res = lengthOfLIS(src);
 console.log('res', res)

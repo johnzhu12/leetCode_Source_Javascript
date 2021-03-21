@@ -172,6 +172,10 @@
   - 数组和排序
     - [三数之和](./normal/Array&String/三数之和.md)
     - [岛屿的最大面积](./byteDance/array&sort/岛屿的最大面积.md)
+    - [搜索旋转排序数组](./byteDance/array&sort/搜索旋转排序数组.md)
+    - [最长连续递增序列](./byteDance/array&sort/最长连续递增序列.md)
+    - [数组中的第 K 个最大元素](./byteDance/array&sort/数组中的第K个最大元素.md)
+    - [最长连续序列](./byteDance/array&sort/最长连续序列.md)
 
 - 腾讯
 
