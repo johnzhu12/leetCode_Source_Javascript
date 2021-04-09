@@ -1,0 +1,26 @@
+{
+  "name": "leetcode_source",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "build": "gitbook build ./ ./docs"
+  },
+  "pre-commit": [
+    "build"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnzhu12/leetCode_Source.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnzhu12/leetCode_Source/issues"
+  },
+  "homepage": "https://github.com/johnzhu12/leetCode_Source#readme",
+  "devDependencies": {
+    "pre-commit": "^1.2.2"
+  }
+}
