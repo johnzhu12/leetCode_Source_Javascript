@@ -6,10 +6,12 @@
   "main": "index.js",
   "scripts": {
     "build": "gitbook build ./ ./docs",
+    "log": "echo finishBuild!",
     "addall": "git add ."
   },
   "pre-commit": [
     "build",
+    "log",
     "addall"
   ],
   "repository": {

@@ -6,12 +6,7 @@
   "main": "index.js",
   "scripts": {
     "build": "gitbook build ./ ./docs",
-    "addall": "git add ."
   },
-  "pre-commit": [
-    "build",
-    "addall"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/johnzhu12/leetCode_Source.git"
