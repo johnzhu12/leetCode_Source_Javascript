@@ -6,11 +6,11 @@
   "main": "index.js",
   "scripts": {
     "build": "gitbook build ./ ./docs",
-    "adddoc": "git add ."
+    "addall": "git add ."
   },
   "pre-commit": [
     "build",
-    "adddoc"
+    "addall"
   ],
   "repository": {
     "type": "git",
