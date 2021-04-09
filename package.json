@@ -5,7 +5,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "build": "gitbook build ./ ./docs",
+    "build": "gitbook build ./ ./docs"
   },
   "repository": {
     "type": "git",
