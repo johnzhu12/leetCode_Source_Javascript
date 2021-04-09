@@ -17,7 +17,5 @@
     "url": "https://github.com/johnzhu12/leetCode_Source/issues"
   },
   "homepage": "https://github.com/johnzhu12/leetCode_Source#readme",
-  "devDependencies": {
-    "pre-commit": "^1.2.2"
-  }
+  "devDependencies": {}
 }
