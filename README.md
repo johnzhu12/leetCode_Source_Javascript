@@ -12,7 +12,7 @@ npm install -g gitbook
 gitbook serve
 ```
 
-在线地址：https://johnzhu12.github.io/#/
+在线地址：https://johnzhu12.github.io/leetCode_Source_Javascript/
 
 开始按简单，中级 tag 刷，后面按公司其他 tag 刷，题目有重复的地方
 
