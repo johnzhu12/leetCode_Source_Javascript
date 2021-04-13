@@ -5,15 +5,8 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "build": "gitbook build ./ ./docs",
-    "log": "echo finishBuild!",
-    "addall": "git add ."
+    "build": "gitbook build ./ ./docs"
   },
-  "pre-commit": [
-    "build",
-    "log",
-    "addall"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/johnzhu12/leetCode_Source.git"
@@ -24,7 +17,5 @@
     "url": "https://github.com/johnzhu12/leetCode_Source/issues"
   },
   "homepage": "https://github.com/johnzhu12/leetCode_Source#readme",
-  "devDependencies": {
-    "pre-commit": "^1.2.2"
-  }
+  "devDependencies": {}
 }
