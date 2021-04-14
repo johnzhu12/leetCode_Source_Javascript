@@ -2395,12 +2395,22 @@
                                 
                                 <h1 id="&#x963F;&#x91CC;&#x9762;&#x8BD5;&#x4E00;&#x9762;&#x9898;&#x76EE;">&#x963F;&#x91CC;&#x9762;&#x8BD5;&#x4E00;&#x9762;&#x9898;&#x76EE;</h1>
 <ol>
-<li><p>123456 =&gt; 123,456
+<li>123456 =&gt; 123,456
 //
-replace(/\d{3}/g,&apos;,&apos;)</p>
-</li>
-<li><p>&#x6570;&#x7EC4;&#x7684;&#x7B1B;&#x5361;&#x5C14;&#x79EF;</p>
-</li>
+replace(/\d{3}/g,&apos;,&apos;)</li>
+</ol>
+<p>&#x770B;&#x4E86;&#x4E0B;&#x7B54;&#x6848;</p>
+<pre><code class="lang-js">str.replace(<span class="hljs-regexp">/\B(?=(?:\d{3})+\b)/g</span>, <span class="hljs-string">&apos;,&apos;</span>)
+</code></pre>
+<blockquote>
+<p>&#x4F8B;&#x5982;&#xFF1A;str = &apos;1234&apos;,&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x4E3A;&apos;1,234&apos;
+\B &#x5339;&#x914D;&#x4E0D;&#x662F;&#x5355;&#x8BCD;&#x5F00;&#x5934;&#x6216;&#x8005;&#x7ED3;&#x675F;&#x7684;&#x4F4D;&#x7F6E;
+(?=exp)&#x5339;&#x914D; exp &#x524D;&#x9762;&#x7684;&#x4F4D;&#x7F6E;
+(?:exp)&#x5339;&#x914D; exp&#xFF0C;&#x4E0D;&#x6355;&#x83B7;&#x5339;&#x914D;&#x7684;&#x6587;&#x672C;&#xFF0C;&#x4E5F;&#x4E0D;&#x7ED9;&#x6B64;&#x5206;&#x7EC4;&#x5206;&#x914D;&#x7EC4;&#x53F7;
+\b &#x4EE3;&#x8868;&#x5355;&#x8BCD;&#x5206;&#x754C;&#x4F4D;&#x7F6E;</p>
+</blockquote>
+<ol>
+<li>&#x6570;&#x7EC4;&#x7684;&#x7B1B;&#x5361;&#x5C14;&#x79EF;</li>
 </ol>
 <p>[[0,1],[2,3,4],[5,6]] =&gt; [[0,2,5],[0,2,6],[1,2,5]...]</p>
 <p>reduce:</p>
@@ -2506,7 +2516,7 @@ replace(/\d{3}/g,&apos;,&apos;)</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"面试题","level":"1.7.1.1","depth":3,"next":{"title":"程序员面试金典","level":"1.8","depth":1,"ref":"","articles":[{"title":"数组与字符串","level":"1.8.1","depth":2,"ref":"","articles":[{"title":"字符是否唯一","level":"1.8.1.1","depth":3,"path":"程序员面试金典/数组与字符串/字符是否唯一.md","ref":"./程序员面试金典/数组与字符串/字符是否唯一.md","articles":[]},{"title":"判定是否互为字符重排","level":"1.8.1.2","depth":3,"path":"程序员面试金典/数组与字符串/判定是否互为字符重排.md","ref":"./程序员面试金典/数组与字符串/判定是否互为字符重排.md","articles":[]},{"title":"URL 化","level":"1.8.1.3","depth":3,"path":"程序员面试金典/数组与字符串/URL化.md","ref":"./程序员面试金典/数组与字符串/URL化.md","articles":[]},{"title":"回文排列","level":"1.8.1.4","depth":3,"path":"程序员面试金典/数组与字符串/回文排列.md","ref":"./程序员面试金典/数组与字符串/回文排列.md","articles":[]}]}]},"previous":{"title":"interview","level":"1.7.1","depth":2,"ref":"","articles":[{"title":"面试题","level":"1.7.1.1","depth":3,"path":"alibaba/interview/interview.md","ref":"./alibaba/interview/interview.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","disqus","multipart"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"leetcodesourcejs"},"search":{},"multipart":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"alibaba/interview/interview.md","mtime":"2021-03-27T12:45:55.686Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-13T10:34:25.292Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"面试题","level":"1.7.1.1","depth":3,"next":{"title":"程序员面试金典","level":"1.8","depth":1,"ref":"","articles":[{"title":"数组与字符串","level":"1.8.1","depth":2,"ref":"","articles":[{"title":"字符是否唯一","level":"1.8.1.1","depth":3,"path":"程序员面试金典/数组与字符串/字符是否唯一.md","ref":"./程序员面试金典/数组与字符串/字符是否唯一.md","articles":[]},{"title":"判定是否互为字符重排","level":"1.8.1.2","depth":3,"path":"程序员面试金典/数组与字符串/判定是否互为字符重排.md","ref":"./程序员面试金典/数组与字符串/判定是否互为字符重排.md","articles":[]},{"title":"URL 化","level":"1.8.1.3","depth":3,"path":"程序员面试金典/数组与字符串/URL化.md","ref":"./程序员面试金典/数组与字符串/URL化.md","articles":[]},{"title":"回文排列","level":"1.8.1.4","depth":3,"path":"程序员面试金典/数组与字符串/回文排列.md","ref":"./程序员面试金典/数组与字符串/回文排列.md","articles":[]}]}]},"previous":{"title":"interview","level":"1.7.1","depth":2,"ref":"","articles":[{"title":"面试题","level":"1.7.1.1","depth":3,"path":"alibaba/interview/interview.md","ref":"./alibaba/interview/interview.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","disqus","multipart"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"leetcodesourcejs"},"search":{},"multipart":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"alibaba/interview/interview.md","mtime":"2021-04-14T02:03:04.029Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-14T03:29:35.087Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
