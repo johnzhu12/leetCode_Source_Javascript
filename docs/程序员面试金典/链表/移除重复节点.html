@@ -2532,11 +2532,27 @@
 }
 </code></pre>
 <p>2.&#x4E0D;&#x7528;&#x7F13;&#x5B58;</p>
-<pre><code class="lang-js"><span class="hljs-comment">// [1, 2, 3, 3, 2, 1]</span>
-<span class="hljs-keyword">var</span> removeDuplicateNodes = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">head</span>) </span>{
-  <span class="hljs-keyword">if</span> (!head || !head.next) <span class="hljs-keyword">return</span> head <span class="hljs-comment">//&#x6CE8;&#x610F;&#xFF01;</span>
+<p>&#x770B;&#x4E86;&#x5B98;&#x65B9;&#x9898;&#x89E3;&#xFF0C;&#x4E24;&#x91CD;&#x5FAA;&#x73AF;</p>
+<pre><code class="lang-java"><span class="hljs-comment">// [1, 2, 3, 3, 2, 1]</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> ListNode <span class="hljs-title">removeDuplicateNodes</span><span class="hljs-params">(ListNode head)</span> </span>{
+        ListNode ob = head;
+        <span class="hljs-keyword">while</span> (ob != <span class="hljs-keyword">null</span>) {
+            ListNode oc = ob;
+            <span class="hljs-keyword">while</span> (oc.next != <span class="hljs-keyword">null</span>) {
+                <span class="hljs-keyword">if</span> (oc.next.val == ob.val) {
+                    oc.next = oc.next.next;
+                } <span class="hljs-keyword">else</span> {
+                    oc = oc.next;
+                }
+            }
+            ob = ob.next;
+        }
+        <span class="hljs-keyword">return</span> head;
+    }
 }
 </code></pre>
+<p>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O(n^2)</p>
 
                                 
                                 </section>
@@ -2572,7 +2588,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"移除重复节点","level":"1.8.2.1","depth":3,"next":{"title":"其他相关算法和数据结构","level":"1.9","depth":1,"ref":"","articles":[{"title":"算法","level":"1.9.1","depth":2,"ref":"","articles":[{"title":"十大排序","level":"1.9.1.1","depth":3,"path":"basicalgo/sort/sort.md","ref":"./basicalgo/sort/sort.md","articles":[]},{"title":"[01 背包]","level":"1.9.1.2","depth":3,"ref":"","articles":[]}]},{"title":"数据结构","level":"1.9.2","depth":2,"ref":"","articles":[{"title":"ES6Map 数据结构底层原理模拟","level":"1.9.2.1","depth":3,"path":"basicalgo/datastruct/map.md","ref":"./basicalgo/datastruct/map.md","articles":[]}]}]},"previous":{"title":"链表","level":"1.8.2","depth":2,"ref":"","articles":[{"title":"移除重复节点","level":"1.8.2.1","depth":3,"path":"程序员面试金典/链表/移除重复节点.md","ref":"./程序员面试金典/链表/移除重复节点.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","disqus","multipart"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"leetcodesourcejs"},"search":{},"multipart":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"程序员面试金典/链表/移除重复节点.md","mtime":"2021-04-15T08:33:43.038Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-15T08:35:15.845Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"移除重复节点","level":"1.8.2.1","depth":3,"next":{"title":"其他相关算法和数据结构","level":"1.9","depth":1,"ref":"","articles":[{"title":"算法","level":"1.9.1","depth":2,"ref":"","articles":[{"title":"十大排序","level":"1.9.1.1","depth":3,"path":"basicalgo/sort/sort.md","ref":"./basicalgo/sort/sort.md","articles":[]},{"title":"[01 背包]","level":"1.9.1.2","depth":3,"ref":"","articles":[]}]},{"title":"数据结构","level":"1.9.2","depth":2,"ref":"","articles":[{"title":"ES6Map 数据结构底层原理模拟","level":"1.9.2.1","depth":3,"path":"basicalgo/datastruct/map.md","ref":"./basicalgo/datastruct/map.md","articles":[]}]}]},"previous":{"title":"链表","level":"1.8.2","depth":2,"ref":"","articles":[{"title":"移除重复节点","level":"1.8.2.1","depth":3,"path":"程序员面试金典/链表/移除重复节点.md","ref":"./程序员面试金典/链表/移除重复节点.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","disqus","multipart"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"leetcodesourcejs"},"search":{},"multipart":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"程序员面试金典/链表/移除重复节点.md","mtime":"2021-04-16T03:10:53.558Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-16T12:33:09.328Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
