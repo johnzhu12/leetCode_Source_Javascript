@@ -2424,6 +2424,38 @@
             
         </li>
     
+        <li class="chapter " data-level="1.8.3" >
+            
+                <span>
+            
+                    
+                    栈与队列
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.3.1" data-path="../栈与队列/三合一.html">
+            
+                <a href="../栈与队列/三合一.html">
+            
+                    
+                    三合一
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
             </ul>
             
@@ -2591,6 +2623,48 @@
   <span class="hljs-keyword">return</span> p
 }
 </code></pre>
+<p>&#x8FD9;&#x79CD;&#x6539;&#x53D8;&#x4E86;&#x94FE;&#x8868;&#xFF0C;&#x4E0D;&#x592A;&#x5408;&#x9002;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E00;&#x4E2A; set &#x6765;&#x4FDD;&#x5B58;&#x8BBF;&#x95EE;&#x8FC7;&#x7684;&#x8282;&#x70B9;&#x3002;&#x539F;&#x7406;&#x4E00;&#x6837;&#xFF0C;&#x4F46;&#x7A7A;&#x95F4;&#x4E5F;&#x662F; O(n)</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> detectCycle = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">head</span>) </span>{
+  <span class="hljs-keyword">const</span> visited = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>()
+  <span class="hljs-keyword">while</span> (head !== <span class="hljs-literal">null</span>) {
+    <span class="hljs-keyword">if</span> (visited.has(head)) {
+      <span class="hljs-keyword">return</span> head
+    }
+    visited.add(head)
+    head = head.next
+  }
+  <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>
+}
+</code></pre>
+<ol>
+<li>&#x539F;&#x6765;&#x5FEB;&#x6162;&#x6307;&#x9488;&#x518D;&#x52A0;&#x4E00;&#x4E2A; ptr &#x662F;&#x53EF;&#x4EE5;&#x7684;&#x3002;&#x770B;&#x9898;&#x89E3;&#x5427;&#xFF0C;&#x8FD9;&#x4E2A;&#x8BC1;&#x660E;&#x5F88;&#x5999;
+<a href="https://leetcode-cn.com/problems/linked-list-cycle-lcci/solution/huan-lu-jian-ce-by-leetcode-solution-s2la/" target="_blank">https://leetcode-cn.com/problems/linked-list-cycle-lcci/solution/huan-lu-jian-ce-by-leetcode-solution-s2la/</a></li>
+</ol>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> detectCycle = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">head</span>) </span>{
+  <span class="hljs-keyword">if</span> (head === <span class="hljs-literal">null</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>
+  }
+  <span class="hljs-keyword">let</span> slow = head,
+    fast = head
+  <span class="hljs-keyword">while</span> (fast !== <span class="hljs-literal">null</span>) {
+    slow = slow.next
+    <span class="hljs-keyword">if</span> (fast.next !== <span class="hljs-literal">null</span>) {
+      fast = fast.next.next
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>
+    }
+    <span class="hljs-keyword">if</span> (fast === slow) {
+      <span class="hljs-keyword">let</span> ptr = head
+      <span class="hljs-keyword">while</span> (ptr !== slow) {
+        ptr = ptr.next
+        slow = slow.next
+      }
+      <span class="hljs-keyword">return</span> ptr
+    }
+  }
+  <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>
+}
+</code></pre>
 
                                 
                                 </section>
@@ -2630,7 +2704,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"环路检测","level":"1.8.2.7","depth":3,"next":{"title":"其他相关算法和数据结构","level":"1.9","depth":1,"ref":"","articles":[{"title":"算法","level":"1.9.1","depth":2,"ref":"","articles":[{"title":"十大排序","level":"1.9.1.1","depth":3,"path":"basicalgo/sort/sort.md","ref":"./basicalgo/sort/sort.md","articles":[]},{"title":"[01 背包]","level":"1.9.1.2","depth":3,"ref":"","articles":[]}]},{"title":"数据结构","level":"1.9.2","depth":2,"ref":"","articles":[{"title":"ES6Map 数据结构底层原理模拟","level":"1.9.2.1","depth":3,"path":"basicalgo/datastruct/map.md","ref":"./basicalgo/datastruct/map.md","articles":[]}]}]},"previous":{"title":"链表相交","level":"1.8.2.6","depth":3,"path":"程序员面试金典/链表/链表相交.md","ref":"./程序员面试金典/链表/链表相交.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","disqus","multipart"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"leetcodesourcejs"},"search":{},"multipart":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"程序员面试金典/链表/环路检测.md","mtime":"2021-04-20T10:26:08.461Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-20T10:26:27.655Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"环路检测","level":"1.8.2.7","depth":3,"next":{"title":"栈与队列","level":"1.8.3","depth":2,"ref":"","articles":[{"title":"三合一","level":"1.8.3.1","depth":3,"path":"程序员面试金典/栈与队列/三合一.md","ref":"./程序员面试金典/栈与队列/三合一.md","articles":[]}]},"previous":{"title":"链表相交","level":"1.8.2.6","depth":3,"path":"程序员面试金典/链表/链表相交.md","ref":"./程序员面试金典/链表/链表相交.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","disqus","multipart"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"leetcodesourcejs"},"search":{},"multipart":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"程序员面试金典/链表/环路检测.md","mtime":"2021-04-21T01:51:10.069Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-23T01:36:15.087Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
