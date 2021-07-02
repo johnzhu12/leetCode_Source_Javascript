@@ -43,6 +43,8 @@ gitbook serve
     - [实现 strStr](./easy/String/实现strStr.md)
     - [外观数列](./easy/String/外观数列.md)
     - [最长公共前缀](./easy/String/最长公共前缀.md)
+    - [有效的括号](./easy/String/有效的括号.md)
+    - [回文数](./easy/String/回文数.md)
 
   - 链表
 
