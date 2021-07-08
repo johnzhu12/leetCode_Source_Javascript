@@ -16,8 +16,8 @@ var Traversal = function (root, type) {
 function preorder(root, res) {
     if (!root) return;
     res.push(root.val);
-    inorder(root.left, res);
-    inorder(root.right, res);
+    preorder(root.left, res);
+    preorder(root.right, res);
 }
 function inorder(root, res) {
     if (!root) return;
@@ -27,8 +27,8 @@ function inorder(root, res) {
 }
 function postorder(root, res) {
     if (!root) return;
-    inorder(root.left, res);
-    inorder(root.right, res);
+    postorder(root.left, res);
+    postorder(root.right, res);
     res.push(root.val);
 }
 var tree = {
