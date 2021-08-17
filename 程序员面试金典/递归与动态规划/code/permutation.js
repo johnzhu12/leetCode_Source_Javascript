@@ -32,4 +32,4 @@ var permutation = function (S) {
 var S = "qwe"
 
 var res = permutation(S)
-console.log(S)
+console.log(res)

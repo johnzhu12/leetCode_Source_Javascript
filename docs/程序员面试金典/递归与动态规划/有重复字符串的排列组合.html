@@ -69,6 +69,8 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="括号.html" />
+    
     
     <link rel="prev" href="无重复字符串的排列组合.html" />
     
@@ -2963,6 +2965,58 @@
             
         </li>
     
+        <li class="chapter " data-level="1.8.6.9" data-path="括号.html">
+            
+                <a href="括号.html">
+            
+                    
+                    括号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6.10" data-path="颜色填充.html">
+            
+                <a href="颜色填充.html">
+            
+                    
+                    颜色填充]
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6.11" data-path="硬币.html">
+            
+                <a href="硬币.html">
+            
+                    
+                    硬币
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6.12" data-path="八皇后.html">
+            
+                <a href="八皇后.html">
+            
+                    
+                    八皇后
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -3114,7 +3168,46 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <h1 id="&#x6709;&#x91CD;&#x590D;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x6392;&#x5217;&#x7EC4;&#x5408;"><a href="https://leetcode-cn.com/problems/permutation-ii-lcci/" target="_blank">&#x6709;&#x91CD;&#x590D;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x6392;&#x5217;&#x7EC4;&#x5408;</a></h1>
+<h2 id="&#x601D;&#x8DEF;">&#x601D;&#x8DEF;</h2>
+<ol>
+<li>&#x57FA;&#x672C;&#x7684;&#x56DE;&#x6EAF;&#xFF0C;&#x7136;&#x540E; set &#x53BB;&#x91CD;</li>
+</ol>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> permutation = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">S</span>) </span>{
+  <span class="hljs-keyword">let</span> res = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>()
+  backtrack(<span class="hljs-string">&apos;&apos;</span>, S)
+  res = <span class="hljs-built_in">Array</span>.from(res)
+  <span class="hljs-keyword">return</span> res
+
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">backtrack</span>(<span class="hljs-params">str, S</span>) </span>{
+    <span class="hljs-comment">// &#x7B26;&#x5408;&#x5B57;&#x7B26;&#x4E32;&#x957F;&#x5EA6;&#x5219;&#x6536;&#x96C6;</span>
+    <span class="hljs-keyword">if</span> (str.length === S.length) {
+      res.add(str)
+      <span class="hljs-keyword">return</span>
+    }
+
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; S.length; i++) {
+      <span class="hljs-comment">// &#x53BB;&#x9664;&#x91CD;&#x590D;&#x5B57;&#x7B26;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;&#x5B57;&#x7B26;&#x4E32;&#x4E3A;&apos;ab&apos;&#xFF0C; &#x53BB;&#x6389;&apos;aa&apos;&#x6216;&apos;bb&apos;&#x8FD9;&#x7C7B;&#x60C5;&#x51B5;</span>
+      <span class="hljs-keyword">if</span> (S[i] != <span class="hljs-string">&apos;*&apos;</span>) {
+        <span class="hljs-keyword">let</span> temp = S[i]
+        <span class="hljs-keyword">let</span> Str = str + temp
+        S = setCharAt(S, i, <span class="hljs-string">&apos;*&apos;</span>)
+        backtrack(Str, S)
+        S = setCharAt(S, i, temp)
+      }
+    }
+  }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setCharAt</span>(<span class="hljs-params">str, index, chr</span>) </span>{
+  <span class="hljs-keyword">if</span> (index &gt; str.length - <span class="hljs-number">1</span>) <span class="hljs-keyword">return</span> str
+  <span class="hljs-keyword">return</span> str.substr(<span class="hljs-number">0</span>, index) + chr + str.substr(index + <span class="hljs-number">1</span>)
+}
+</code></pre>
+<ol>
+<li>&#x56DE;&#x5934;&#x518D;&#x770B;&#x770B;&#x9898;&#x89E3;&#x91CC;&#x7684;&#x5927;&#x4F6C;&#x601D;&#x8DEF;</li>
+</ol>
+
                                 
                                 </section>
                             
@@ -3141,10 +3234,14 @@
 
             
                 
-                <a href="无重复字符串的排列组合.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 无重复字符串的排列组合">
+                <a href="无重复字符串的排列组合.html" class="navigation navigation-prev " aria-label="Previous page: 无重复字符串的排列组合">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="括号.html" class="navigation navigation-next " aria-label="Next page: 括号">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -3153,7 +3250,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"有重复字符串的排列组合","level":"1.8.6.8","depth":3,"next":{"title":"其他相关算法和数据结构","level":"1.9","depth":1,"ref":"","articles":[{"title":"算法","level":"1.9.1","depth":2,"ref":"","articles":[{"title":"十大排序","level":"1.9.1.1","depth":3,"path":"basicalgo/sort/sort.md","ref":"./basicalgo/sort/sort.md","articles":[]},{"title":"[01 背包]","level":"1.9.1.2","depth":3,"ref":"","articles":[]}]},{"title":"数据结构","level":"1.9.2","depth":2,"ref":"","articles":[{"title":"ES6Map 数据结构底层原理模拟","level":"1.9.2.1","depth":3,"path":"basicalgo/datastruct/map.md","ref":"./basicalgo/datastruct/map.md","articles":[]}]}]},"previous":{"title":"无重复字符串的排列组合","level":"1.8.6.7","depth":3,"path":"程序员面试金典/递归与动态规划/无重复字符串的排列组合.md","ref":"./程序员面试金典/递归与动态规划/无重复字符串的排列组合.md","articles":[]},"dir":"neutral"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","disqus","multipart"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"leetcodesourcejs"},"search":{},"multipart":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"程序员面试金典/递归与动态规划/有重复字符串的排列组合.md","mtime":"2021-08-13T09:34:25.106Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-13T09:36:03.176Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"有重复字符串的排列组合","level":"1.8.6.8","depth":3,"next":{"title":"括号","level":"1.8.6.9","depth":3,"path":"程序员面试金典/递归与动态规划/括号.md","ref":"./程序员面试金典/递归与动态规划/括号.md","articles":[]},"previous":{"title":"无重复字符串的排列组合","level":"1.8.6.7","depth":3,"path":"程序员面试金典/递归与动态规划/无重复字符串的排列组合.md","ref":"./程序员面试金典/递归与动态规划/无重复字符串的排列组合.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","disqus","multipart"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"leetcodesourcejs"},"search":{},"multipart":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"程序员面试金典/递归与动态规划/有重复字符串的排列组合.md","mtime":"2021-08-16T08:32:08.577Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-17T10:48:54.131Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
