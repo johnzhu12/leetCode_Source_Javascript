@@ -185,6 +185,7 @@ gitbook serve
     - [最小覆盖子串](./hard/string/最小覆盖子串.md)
   - DP
     - [戳气球](./hard/DP/戳气球.md)
+    - [最短编辑距离](./hard/DP/最短编辑距离.md)
 
 - 字节跳动
 

@@ -1,0 +1,48 @@
+
+function minDistance(word1, word2) {
+  var n = word1.length
+  var m = word2.length
+
+  // 有一个字符串为空串
+  if (n * m == 0) {
+    return n + m;
+  }
+
+  // DP 数组
+  var D = []
+  for (let i = 0; i < n + 1; i++) {
+    var temp = []
+    for (let j = 0; j < m + 1; j++) {
+      temp.push(0)
+    }
+    D.push(temp)
+  }
+
+
+  // 边界状态初始化
+  for (let i = 0; i < n + 1; i++) {
+    D[i][0] = i;
+  }
+  for (let j = 0; j < m + 1; j++) {
+    D[0][j] = j;
+  }
+
+  // 计算所有 DP 值
+  for (let i = 1; i < n + 1; i++) {
+    for (let j = 1; j < m + 1; j++) {
+      let left = D[i - 1][j] + 1;
+      let down = D[i][j - 1] + 1;
+      let left_down = D[i - 1][j - 1];
+      if (word1.charAt(i - 1) != word2.charAt(j - 1)) {
+        left_down += 1;
+      }
+      D[i][j] = Math.min(left, Math.min(down, left_down));
+    }
+  }
+  return D[n][m];
+}
+
+
+var res = minDistance('horse', 'ros')
+
+console.log(res)
