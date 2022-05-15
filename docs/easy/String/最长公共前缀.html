@@ -3286,33 +3286,6 @@
                                 <h1 id="&#x6700;&#x957F;&#x516C;&#x5171;&#x524D;&#x7F00;"><a href="https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/5/strings/40/" target="_blank">&#x6700;&#x957F;&#x516C;&#x5171;&#x524D;&#x7F00;</a></h1>
 <p><img src="imgs/longestCommonPrefix.png" alt="longestCommonPrefix"></p>
 <h2 id="&#x601D;&#x8DEF;">&#x601D;&#x8DEF;</h2>
-<p>&#x601D;&#x8DEF;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x7528;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x6765;&#x8BD5;&#xFF0C;&#x9996;&#x5148;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x53D6;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;(&#x5224;&#x65AD;&#x5B57;&#x7B26;)&#xFF0C;&#x5982;&#x679C;&#x540E;&#x9762;&#x6709;&#x5143;&#x7D20;&#x5224;&#x65AD;&#x4E0D;&#x5305;&#x542B;&#xFF0C;&#x5219;&#x8DF3;&#x51FA;&#x4E24;&#x5C42;&#x5FAA;&#x73AF;&#x3002;&#x540C;&#x65F6;&#x4E4B;&#x524D;&#x7684;&#x5224;&#x65AD;&#x5B57;&#x7B26;&#x591A;&#x4E86;&#x4E00;&#x4F4D;&#xFF0C;&#x540E;&#x9762;&#x8981;&#x8BB0;&#x5F97;&#x622A;&#x53D6;&#x6389;&#x3002;</p>
-<p>&#x81EA;&#x5DF1;&#x5199;&#x7684;</p>
-<pre><code class="lang-js"><span class="hljs-keyword">var</span> longestCommonPrefix = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">strs</span>) </span>{
-  <span class="hljs-keyword">if</span> (strs.length == <span class="hljs-number">0</span> || strs[<span class="hljs-number">0</span>].length == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;&apos;</span>
-  <span class="hljs-keyword">if</span> (strs.length == <span class="hljs-number">1</span>) <span class="hljs-keyword">return</span> strs[<span class="hljs-number">0</span>]
-  <span class="hljs-keyword">var</span> index = <span class="hljs-number">1</span>,
-    breaked = <span class="hljs-literal">false</span>
-  outer: <span class="hljs-keyword">while</span> (index &lt;= strs[<span class="hljs-number">0</span>].length) {
-    inter: <span class="hljs-keyword">var</span> testStr = strs[<span class="hljs-number">0</span>].substring(<span class="hljs-number">0</span>, index)
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>, len = strs.length; i &lt; len; i++) {
-      <span class="hljs-keyword">var</span> item = strs[i]
-      <span class="hljs-keyword">if</span> (item.indexOf(testStr) &lt; <span class="hljs-number">0</span>) {
-        breaked = <span class="hljs-literal">true</span>
-        <span class="hljs-keyword">break</span> outer
-      }
-    }
-    index++
-  }
-  <span class="hljs-keyword">var</span> strlen = testStr.length
-  <span class="hljs-keyword">return</span> breaked ? testStr.substring(<span class="hljs-number">0</span>, strlen - <span class="hljs-number">1</span>) : testStr <span class="hljs-comment">//&#x622A;&#x6389;&#x6700;&#x540E;&#x4E00;&#x4F4D;</span>
-}
-
-<span class="hljs-keyword">var</span> src = [<span class="hljs-string">&apos;c&apos;</span>, <span class="hljs-string">&apos;acc&apos;</span>, <span class="hljs-string">&apos;ccc&apos;</span>]
-<span class="hljs-keyword">var</span> res = longestCommonPrefix(src)
-<span class="hljs-built_in">console</span>.log(res)
-</code></pre>
-<p>&#x9898;&#x89E3;&#x91CC;&#x7684;&#x7B54;&#x6848;&#xFF1A;</p>
 <pre><code class="lang-js"><span class="hljs-comment">/**
  * @param {string[]} strs
  * @return {string}
@@ -3370,7 +3343,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"最长公共前缀","level":"1.2.2.9","depth":3,"next":{"title":"链表","level":"1.2.3","depth":2,"ref":"","articles":[{"title":"删除链表中的节点","level":"1.2.3.1","depth":3,"path":"easy/LinkedList/删除链表中的节点.md","ref":"./easy/LinkedList/删除链表中的节点.md","articles":[]},{"title":"删除链表的倒数第 N 个节点","level":"1.2.3.2","depth":3,"path":"easy/LinkedList/删除链表的倒数第N个节点.md","ref":"./easy/LinkedList/删除链表的倒数第N个节点.md","articles":[]},{"title":"反转链表","level":"1.2.3.3","depth":3,"path":"easy/LinkedList/反转链表.md","ref":"./easy/LinkedList/反转链表.md","articles":[]},{"title":"合并两个有序链表","level":"1.2.3.4","depth":3,"path":"easy/LinkedList/合并两个有序链表.md","ref":"./easy/LinkedList/合并两个有序链表.md","articles":[]},{"title":"回文链表","level":"1.2.3.5","depth":3,"path":"easy/LinkedList/回文链表.md","ref":"./easy/LinkedList/回文链表.md","articles":[]},{"title":"环形链表","level":"1.2.3.6","depth":3,"path":"easy/LinkedList/环形链表.md","ref":"./easy/LinkedList/环形链表.md","articles":[]}]},"previous":{"title":"外观数列","level":"1.2.2.8","depth":3,"path":"easy/String/外观数列.md","ref":"./easy/String/外观数列.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","disqus","multipart"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"leetcodesourcejs"},"search":{},"multipart":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"easy/String/最长公共前缀.md","mtime":"2021-03-16T10:42:35.867Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-11T10:17:52.178Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"最长公共前缀","level":"1.2.2.9","depth":3,"next":{"title":"链表","level":"1.2.3","depth":2,"ref":"","articles":[{"title":"删除链表中的节点","level":"1.2.3.1","depth":3,"path":"easy/LinkedList/删除链表中的节点.md","ref":"./easy/LinkedList/删除链表中的节点.md","articles":[]},{"title":"删除链表的倒数第 N 个节点","level":"1.2.3.2","depth":3,"path":"easy/LinkedList/删除链表的倒数第N个节点.md","ref":"./easy/LinkedList/删除链表的倒数第N个节点.md","articles":[]},{"title":"反转链表","level":"1.2.3.3","depth":3,"path":"easy/LinkedList/反转链表.md","ref":"./easy/LinkedList/反转链表.md","articles":[]},{"title":"合并两个有序链表","level":"1.2.3.4","depth":3,"path":"easy/LinkedList/合并两个有序链表.md","ref":"./easy/LinkedList/合并两个有序链表.md","articles":[]},{"title":"回文链表","level":"1.2.3.5","depth":3,"path":"easy/LinkedList/回文链表.md","ref":"./easy/LinkedList/回文链表.md","articles":[]},{"title":"环形链表","level":"1.2.3.6","depth":3,"path":"easy/LinkedList/环形链表.md","ref":"./easy/LinkedList/环形链表.md","articles":[]}]},"previous":{"title":"外观数列","level":"1.2.2.8","depth":3,"path":"easy/String/外观数列.md","ref":"./easy/String/外观数列.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","disqus","multipart"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"leetcodesourcejs"},"search":{},"multipart":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"easy/String/最长公共前缀.md","mtime":"2022-05-12T09:25:07.950Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-15T10:34:10.184Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

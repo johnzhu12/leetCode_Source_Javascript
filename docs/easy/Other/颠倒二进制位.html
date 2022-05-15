@@ -3287,6 +3287,38 @@
                                 
                                 <h1 id="&#x98A0;&#x5012;&#x4E8C;&#x8FDB;&#x5236;&#x4F4D;"><a href="https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/26/others/66/" target="_blank">&#x98A0;&#x5012;&#x4E8C;&#x8FDB;&#x5236;&#x4F4D;</a></h1>
 <p><img src="imgs/reverseBits.png" alt="reverseBits"></p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> reverseBits = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">n</span>) </span>{
+  <span class="hljs-keyword">var</span> str = <span class="hljs-built_in">Number</span>(n).toString(<span class="hljs-number">2</span>)
+  str = str.padStart(<span class="hljs-number">32</span>, <span class="hljs-number">0</span>)
+  <span class="hljs-comment">// console.log(&apos;str&apos;,str)</span>
+  reverseStr = str.split(<span class="hljs-string">&apos;&apos;</span>).reverse().join(<span class="hljs-string">&apos;&apos;</span>)
+  <span class="hljs-comment">// console.log(&apos;reverseStr&apos;,reverseStr)</span>
+  <span class="hljs-keyword">return</span> <span class="hljs-built_in">parseInt</span>(reverseStr, <span class="hljs-number">2</span>)
+}
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> reverseBits = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">n</span>) </span>{
+  <span class="hljs-keyword">let</span> rev = <span class="hljs-number">0</span>
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">32</span> &amp;&amp; n &gt; <span class="hljs-number">0</span>; ++i) {
+    rev |= (n &amp; <span class="hljs-number">1</span>) &lt;&lt; (<span class="hljs-number">31</span> - i)
+    n &gt;&gt;&gt;= <span class="hljs-number">1</span>
+  }
+  <span class="hljs-keyword">return</span> rev &gt;&gt;&gt; <span class="hljs-number">0</span>
+}
+</code></pre>
+<p>&#x5206;&#x667A;&#x7B97;&#x6CD5;&#xFF0C;&#x6211;&#x8FD8;&#x6CA1;&#x770B;&#x61C2;&#xFF0C;&#x6709;&#x65F6;&#x95F4;&#x7814;&#x7A76;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> reverseBits = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">n</span>) </span>{
+  <span class="hljs-keyword">const</span> M1 = <span class="hljs-number">0x55555555</span> <span class="hljs-comment">// 01010101010101010101010101010101</span>
+  <span class="hljs-keyword">const</span> M2 = <span class="hljs-number">0x33333333</span> <span class="hljs-comment">// 00110011001100110011001100110011</span>
+  <span class="hljs-keyword">const</span> M4 = <span class="hljs-number">0x0f0f0f0f</span> <span class="hljs-comment">// 00001111000011110000111100001111</span>
+  <span class="hljs-keyword">const</span> M8 = <span class="hljs-number">0x00ff00ff</span> <span class="hljs-comment">// 00000000111111110000000011111111</span>
+
+  n = ((n &gt;&gt;&gt; <span class="hljs-number">1</span>) &amp; M1) | ((n &amp; M1) &lt;&lt; <span class="hljs-number">1</span>)
+  n = ((n &gt;&gt;&gt; <span class="hljs-number">2</span>) &amp; M2) | ((n &amp; M2) &lt;&lt; <span class="hljs-number">2</span>)
+  n = ((n &gt;&gt;&gt; <span class="hljs-number">4</span>) &amp; M4) | ((n &amp; M4) &lt;&lt; <span class="hljs-number">4</span>)
+  n = ((n &gt;&gt;&gt; <span class="hljs-number">8</span>) &amp; M8) | ((n &amp; M8) &lt;&lt; <span class="hljs-number">8</span>)
+  <span class="hljs-keyword">return</span> ((n &gt;&gt;&gt; <span class="hljs-number">16</span>) | (n &lt;&lt; <span class="hljs-number">16</span>)) &gt;&gt;&gt; <span class="hljs-number">0</span>
+}
+</code></pre>
 
                                 
                                 </section>
@@ -3330,7 +3362,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"颠倒二进制位","level":"1.2.9.3","depth":3,"next":{"title":"帕斯卡三角形","level":"1.2.9.4","depth":3,"path":"easy/Other/帕斯卡三角形.md","ref":"./easy/Other/帕斯卡三角形.md","articles":[]},"previous":{"title":"汉明距离","level":"1.2.9.2","depth":3,"path":"easy/Other/汉明距离.md","ref":"./easy/Other/汉明距离.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","disqus","multipart"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"leetcodesourcejs"},"search":{},"multipart":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"easy/Other/颠倒二进制位.md","mtime":"2020-06-03T08:53:11.415Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-11T10:17:52.178Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"颠倒二进制位","level":"1.2.9.3","depth":3,"next":{"title":"帕斯卡三角形","level":"1.2.9.4","depth":3,"path":"easy/Other/帕斯卡三角形.md","ref":"./easy/Other/帕斯卡三角形.md","articles":[]},"previous":{"title":"汉明距离","level":"1.2.9.2","depth":3,"path":"easy/Other/汉明距离.md","ref":"./easy/Other/汉明距离.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","disqus","multipart"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"leetcodesourcejs"},"search":{},"multipart":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"easy/Other/颠倒二进制位.md","mtime":"2022-05-07T01:57:11.883Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-15T10:34:10.184Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

@@ -2,7 +2,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-var longestConsecutive = function (nums) {
+var longestConsecutive = function(nums) {
     if (nums.length == 0) return 0
     nums = nums.sort((a, b) => a - b)
     var dp = [], ans = 1;

@@ -104,6 +104,7 @@ gitbook serve
     - [帕斯卡三角形](./easy/Other/帕斯卡三角形.md)
     - [有效的括号](./easy/Other/有效的括号.md)
     - [缺失数字](./easy/Other/缺失数字.md)
+    - [Excel 表列名称](./easy/Other/Excel表列名称.md)
 
 - 中级算法
 

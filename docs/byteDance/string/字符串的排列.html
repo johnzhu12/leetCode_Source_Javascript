@@ -3286,45 +3286,6 @@
                                 <h1 id="&#x5B57;&#x7B26;&#x4E32;&#x6392;&#x5217;"><a href="https://leetcode-cn.com/explore/featured/card/bytedance/242/string/1016/" target="_blank">&#x5B57;&#x7B26;&#x4E32;&#x6392;&#x5217;</a></h1>
 <p><img src="imgs/checkInclusion.png" alt="checkInclusion"></p>
 <h2 id="&#x601D;&#x8DEF;">&#x601D;&#x8DEF;</h2>
-<p>&#x66B4;&#x529B;&#x68C0;&#x67E5;&#x3002;
-s1 &#x6216; s2 &#x4E3A;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;,&#x8FD4;&#x56DE; false</p>
-<p>&#x9996;&#x5148;&#x5982;&#x679C; s1 &#x7684;&#x957F;&#x5EA6;&#x5927;&#x4E8E; s2 &#x7684;&#x957F;&#x5EA6;,&#x8FD4;&#x56DE; false</p>
-<pre><code class="lang-js"><span class="hljs-comment">/**
- * @param {string} s1
- * @param {string} s2
- * @return {boolean}
- */</span>
-<span class="hljs-keyword">var</span> checkInclusion = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">s1, s2</span>) </span>{
-  <span class="hljs-keyword">if</span> (s1 == <span class="hljs-string">&apos;&apos;</span> || s2 == <span class="hljs-string">&apos;&apos;</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
-  <span class="hljs-keyword">let</span> len1 = s1.length,
-    len2 = s2.length
-  <span class="hljs-keyword">if</span> (len1 &gt; len2) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
-  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt;= len2 - len1; i++) {
-    <span class="hljs-keyword">let</span> subStr2 = s2.substr(i, len1)
-    <span class="hljs-keyword">if</span> (checkStr(s1, subStr2)) {
-      <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
-    }
-  }
-  <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
-}
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">checkStr</span>(<span class="hljs-params">s1, s2</span>) </span>{
-  <span class="hljs-keyword">let</span> tems1 = s1.split(<span class="hljs-string">&apos;&apos;</span>).sort().join(<span class="hljs-string">&apos;&apos;</span>)
-  <span class="hljs-keyword">let</span> tems2 = s2.split(<span class="hljs-string">&apos;&apos;</span>).sort().join(<span class="hljs-string">&apos;&apos;</span>)
-  <span class="hljs-keyword">if</span> (tems1 == tems2) {
-    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
-  }
-  <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
-}
-
-<span class="hljs-keyword">let</span> s1 = <span class="hljs-string">&apos;ab&apos;</span>,
-  s2 = <span class="hljs-string">&apos;eidbaooo&apos;</span>
-
-<span class="hljs-keyword">let</span> res = checkInclusion(s1, s2)
-
-<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;res:&apos;</span>, res)
-</code></pre>
-<p>&#x4E00;&#x63D0;&#x4EA4;&#xFF0C;&#x8D85;&#x8FC7;&#x65F6;&#x95F4;&#x9650;&#x5236;</p>
-<p>&#x6211;&#x662F;&#x8111;&#x6B8B;&#xFF1A;&#x76F4;&#x63A5;&#x770B;&#x5B98;&#x65B9;&#x89E3;&#x7B54;&#x5427;</p>
 <p><a href="https://leetcode-cn.com/problems/permutation-in-string/solution/zi-fu-chuan-de-pai-lie-by-leetcode-solut-7k7u/" target="_blank">https://leetcode-cn.com/problems/permutation-in-string/solution/zi-fu-chuan-de-pai-lie-by-leetcode-solut-7k7u/</a></p>
 <p>&#x6ED1;&#x52A8;&#x7A97;&#x53E3;</p>
 <pre><code class="lang-js"><span class="hljs-keyword">var</span> checkInclusion = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">s1, s2</span>) </span>{
@@ -3392,7 +3353,7 @@ s1 &#x6216; s2 &#x4E3A;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;,&#x8FD4;&#x56DE; false</
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"字符串的排列","level":"1.5.1.1","depth":3,"next":{"title":"最长公共前缀","level":"1.5.1.2","depth":3,"path":"easy/String/最长公共前缀.md","ref":"./easy/String/最长公共前缀.md","articles":[]},"previous":{"title":"字符串","level":"1.5.1","depth":2,"ref":"","articles":[{"title":"字符串的排列","level":"1.5.1.1","depth":3,"path":"byteDance/string/字符串的排列.md","ref":"./byteDance/string/字符串的排列.md","articles":[]},{"title":"最长公共前缀","level":"1.5.1.2","depth":3,"path":"easy/String/最长公共前缀.md","ref":"./easy/String/最长公共前缀.md","articles":[]},{"title":"无重复字符的最长子串","level":"1.5.1.3","depth":3,"path":"normal/Array&String/无重复字符的最长子串.md","ref":"./normal/Array&String/无重复字符的最长子串.md","articles":[]},{"title":"字符串相乘","level":"1.5.1.4","depth":3,"path":"byteDance/string/字符串相乘.md","ref":"./byteDance/string/字符串相乘.md","articles":[]},{"title":"翻转字符串里的单词","level":"1.5.1.5","depth":3,"path":"byteDance/string/翻转字符串里的单词.md","ref":"./byteDance/string/翻转字符串里的单词.md","articles":[]},{"title":"简化路径","level":"1.5.1.6","depth":3,"path":"byteDance/string/简化路径.md","ref":"./byteDance/string/简化路径.md","articles":[]},{"title":"复原 IP 地址","level":"1.5.1.7","depth":3,"path":"byteDance/string/复原IP地址.md","ref":"./byteDance/string/复原IP地址.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","disqus","multipart"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"leetcodesourcejs"},"search":{},"multipart":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"byteDance/string/字符串的排列.md","mtime":"2021-03-16T13:15:11.752Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-11T10:17:52.178Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"字符串的排列","level":"1.5.1.1","depth":3,"next":{"title":"最长公共前缀","level":"1.5.1.2","depth":3,"path":"easy/String/最长公共前缀.md","ref":"./easy/String/最长公共前缀.md","articles":[]},"previous":{"title":"字符串","level":"1.5.1","depth":2,"ref":"","articles":[{"title":"字符串的排列","level":"1.5.1.1","depth":3,"path":"byteDance/string/字符串的排列.md","ref":"./byteDance/string/字符串的排列.md","articles":[]},{"title":"最长公共前缀","level":"1.5.1.2","depth":3,"path":"easy/String/最长公共前缀.md","ref":"./easy/String/最长公共前缀.md","articles":[]},{"title":"无重复字符的最长子串","level":"1.5.1.3","depth":3,"path":"normal/Array&String/无重复字符的最长子串.md","ref":"./normal/Array&String/无重复字符的最长子串.md","articles":[]},{"title":"字符串相乘","level":"1.5.1.4","depth":3,"path":"byteDance/string/字符串相乘.md","ref":"./byteDance/string/字符串相乘.md","articles":[]},{"title":"翻转字符串里的单词","level":"1.5.1.5","depth":3,"path":"byteDance/string/翻转字符串里的单词.md","ref":"./byteDance/string/翻转字符串里的单词.md","articles":[]},{"title":"简化路径","level":"1.5.1.6","depth":3,"path":"byteDance/string/简化路径.md","ref":"./byteDance/string/简化路径.md","articles":[]},{"title":"复原 IP 地址","level":"1.5.1.7","depth":3,"path":"byteDance/string/复原IP地址.md","ref":"./byteDance/string/复原IP地址.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","disqus","multipart"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"leetcodesourcejs"},"search":{},"multipart":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"byteDance/string/字符串的排列.md","mtime":"2022-05-12T09:11:07.486Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-15T10:34:10.184Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

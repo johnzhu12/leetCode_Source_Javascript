@@ -25,7 +25,7 @@ var hanota = function (A, B, C) {
 };
 
 
-var a = [2, 1, 0]
+var a = [3, 2, 1, 0]
 var b = []
 var c = []
 

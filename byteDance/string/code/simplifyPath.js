@@ -2,7 +2,7 @@
  * @param {string} path
  * @return {string}
  */
-var simplifyPath = function (path) {
+var simplifyPath = function(path) {
     const dir = path.split('/'), stack = []
     for (const i of dir) {
         if (i === '.' || i === '') continue
@@ -15,7 +15,7 @@ var simplifyPath = function (path) {
     return '/' + stack.join('/')
 };
 
-var src = "/a/./b/../../c/"
+var src = "/home//foo/"
 
 var res = simplifyPath(src)
 
